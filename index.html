@@ -143,31 +143,19 @@
       width: 100%;
       background-color: #050505;
       border-bottom: 1px solid #1f2937;
-      padding: 20px 0;
+      padding: 15px 0;
       position: sticky;
       top: 0;
       z-index: 100;
     }
 
-    .logo {
-      font-weight: 900;
-      font-size: 22px;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-style: normal;
-    }
-    .logo span { color: #dc2626; font-style: italic; }
-	
-	
-
     /* =========================================
-       HERO SECTION (UPDATED FOR 3 IMAGES)
+       HERO SECTION
        ========================================= */
     .hero-section {
       width: 100%;
       background: radial-gradient(circle at 30% 50%, #0f1c30 0%, #050505 65%);
-      padding: 80px 0 120px 0; /* Mais espaço embaixo */
+      padding: 80px 0 120px 0;
       min-height: 85vh;
       display: flex;
       align-items: center;
@@ -200,8 +188,8 @@
       top: 20px;
       left: 50%;
       transform: translateX(-50%);
-      border-color: #f59e0b; /* Borda Dourada */
-      width: 260px; /* Ligeiramente maior */
+      border-color: #f59e0b;
+      width: 260px;
     }
 
     /* Celular Esquerdo */
@@ -220,25 +208,23 @@
       top: 80px;
       right: 5%;
       transform: rotate(12deg);
-      border-color: #dc2626; /* Borda Vermelha */
+      border-color: #dc2626;
       filter: brightness(0.7);
     }
 
-    /* Efeito Hover simples */
     .hero-images:hover .phone-left { transform: rotate(-15deg) translateX(-20px); }
     .hero-images:hover .phone-right { transform: rotate(15deg) translateX(20px); }
 
-/* =========================================
-       VIDEO SECTION (REDESIGNED)
+    /* =========================================
+       VIDEO SECTION (FRAME TÁTICO)
        ========================================= */
     .video-section {
         background: #050505;
         padding: 100px 0;
         position: relative;
-        overflow: hidden; /* Para conter o glow */
+        overflow: hidden;
     }
 
-    /* Títulos da Seção */
     .video-header-content {
         text-align: center;
         margin-bottom: 50px;
@@ -259,22 +245,20 @@
         margin: 0 auto;
     }
 
-    /* O Frame Estético (Container Externo) */
     .video-frame-wrapper {
         max-width: 900px;
         margin: 0 auto;
         position: relative;
-        padding: 15px; /* Espaço entre a borda e o vídeo */
-        background: rgba(20, 20, 20, 0.6); /* Fundo semi-transparente */
+        padding: 15px;
+        background: rgba(20, 20, 20, 0.6);
         border: 1px solid #333;
-        border-radius: 24px; /* Borda bem arredondada como na ref */
-        backdrop-filter: blur(10px); /* Efeito de vidro */
+        border-radius: 24px;
+        backdrop-filter: blur(10px);
         box-shadow: 
-            0 20px 50px rgba(0,0,0,0.8), /* Sombra profunda */
-            0 0 100px rgba(220, 38, 38, 0.1); /* Glow vermelho sutil atrás */
+            0 20px 50px rgba(0,0,0,0.8),
+            0 0 100px rgba(220, 38, 38, 0.1);
     }
 
-    /* Barra de "Interface" acima do vídeo */
     .video-ui-bar {
         display: flex;
         justify-content: space-between;
@@ -297,14 +281,13 @@
         animation: blinkRed 2s infinite;
     }
 
-    /* O Container do Vídeo em si */
     .video-container {
         position: relative;
         width: 100%;
-        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        padding-bottom: 56.25%;
         height: 0;
         background: #000;
-        border-radius: 16px; /* Borda interna levemente menor */
+        border-radius: 16px;
         overflow: hidden;
         border: 1px solid #222;
     }
@@ -322,12 +305,6 @@
         100% { opacity: 1; }
     }
 
-    @media (max-width: 600px) {
-        .video-frame-wrapper { padding: 8px; border-radius: 16px; }
-        .video-container { border-radius: 10px; }
-        .video-header-content h2 { font-size: 28px; }
-    }
-	
     /* =========================================
        RADAR SECTION
        ========================================= */
@@ -383,7 +360,7 @@
     .card-icon { color: #dc2626; font-size: 24px; }
 
     /* =========================================
-       X-RAY (PROGRESS BARS & HUD OVERLAY)
+       X-RAY & HUD
        ========================================= */
     .xray-section {
       width: 100%;
@@ -395,10 +372,9 @@
       display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;
     }
 
-    /* Container da imagem do scanner */
     .xray-img-box { 
         text-align: center; 
-        position: relative; /* Importante para o HUD */
+        position: relative; 
         display: inline-block;
         margin: 0 auto;
         left: 50%;
@@ -412,11 +388,10 @@
       max-width: 100%;
     }
 
-    /* --- HUD OVERLAY STYLES --- */
     .hud-overlay {
         position: absolute;
         top: 0; left: 0; width: 100%; height: 100%;
-        pointer-events: none; /* Permite clicar através */
+        pointer-events: none;
         border-radius: 8px;
         overflow: hidden;
     }
@@ -427,7 +402,6 @@
         border: 2px solid transparent;
     }
     
-    /* Cantos em vermelho */
     .tl { top: 10px; left: 10px; border-top-color: #dc2626; border-left-color: #dc2626; }
     .tr { top: 10px; right: 10px; border-top-color: #dc2626; border-right-color: #dc2626; }
     .bl { bottom: 10px; left: 10px; border-bottom-color: #dc2626; border-left-color: #dc2626; }
@@ -472,8 +446,6 @@
     }
 
     @keyframes blink { 0% {opacity:1;} 50% {opacity:0.3;} 100% {opacity:1;} }
-
-    /* --- END HUD --- */
 
     .stat-row {
       margin-bottom: 25px; background: rgba(17, 17, 17, 0.8);
@@ -532,7 +504,7 @@
     }
 
     /* =========================================
-       FINAL CTA SECTION
+       FINAL CTA & FAQ
        ========================================= */
     .final-cta-section {
       padding: 120px 0;
@@ -549,13 +521,9 @@
     }
 
     .final-cta-content { position: relative; z-index: 2; }
-
     .final-cta-content h2 { font-size: 48px; margin-bottom: 20px; color: #fff; }
     .final-cta-content p { max-width: 700px; margin: 0 auto 40px; font-size: 18px; color: #ccc; }
 
-    /* =========================================
-       FAQ SECTION
-       ========================================= */
     .faq-section {
       padding: 100px 0;
       background: #050505;
@@ -601,38 +569,75 @@
         to { opacity: 1; transform: translateY(0); }
     }
 
-
     /* =========================================
-       MOBILE RESPONSIVENESS
+       MOBILE RESPONSIVENESS (CORREÇÕES VITAIS)
        ========================================= */
     @media (max-width: 900px) {
-      .hero h1 { font-size: 42px; line-height: 1.1; }
-      .hero-flex { flex-direction: column; text-align: center; }
-      .hero-content { padding-right: 0; margin-bottom: 80px; align-items: center; display: flex; flex-direction: column;}
-      .hero-images { width: 100%; height: 400px; margin-top: 30px; }
+      /* 1. LAYOUT DE COLUNA ÚNICA FORÇADA */
+      .hero-flex {
+        flex-direction: column !important; /* Força uma embaixo da outra */
+        align-items: center;
+      }
       
-      /* Ajuste dos celulares no mobile: esconde laterais, centraliza o principal */
-      .phone-center { width: 200px; }
-      .phone-left, .phone-right { display: none; }
+      .hero-content {
+        order: 1; /* Texto Primeiro */
+        width: 100%;
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .hero-images {
+        order: 2; /* Imagem Depois */
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        overflow: visible;
+      }
+
+      /* 2. HEADER: LOGIN APARECE, INICIAR SOME */
+      .nav-actions .btn-header-gold { display: none; } /* Esconde 'Iniciar' no header */
+      .nav-actions .btn-outline { display: inline-block !important; margin-left: auto;} /* Mostra 'Login' */
+      
+      .logo-text { font-size: 12px !important; }
+      .logo-container svg { width: 30px; height: 30px; }
+      
+      /* Ajustes de Texto e Imagem */
+      .hero-section { 
+        padding-top: 40px; 
+        min-height: auto;
+      }
+
+      .hero-content h1 { 
+        font-size: 32px !important; 
+        line-height: 1.1;
+      }
+      
+      .price-tactical-box { margin: 0 auto 25px auto; }
+      
+      .phone-left, .phone-right { display: none; } /* Esconde celulares laterais */
+      
+      .phone-center { 
+        position: relative; /* Remove absolute */
+        width: 70%;
+        max-width: 250px;
+        top: 0; left: 0;
+        transform: none;
+        box-shadow: 0 0 50px rgba(245, 158, 11, 0.2);
+      }
       
       .grid-3, .grid-2, .xray-content { grid-template-columns: 1fr; }
       .xray-img-box { margin-bottom: 40px; transform: translateX(-50%); }
       
-      .price-tactical-box { margin: 0 auto 25px auto; }
-      
-      .xray-section {
-        background: radial-gradient(circle at 50% 20%, #0f1c30 0%, #050505 60%);
-      }
-
-      .final-cta-content h2 { font-size: 32px; }
+      .video-frame-wrapper { padding: 8px; border-radius: 16px; }
+      .video-header-content h2 { font-size: 28px; }
     }
 
     @media (max-width: 480px) {
-      .hero h1 { font-size: 36px; }
       .btn-cta { width: 100%; padding: 15px; font-size: 16px; }
-      .nav-actions { gap: 10px; }
-      .btn-header-gold { padding: 8px 16px; font-size: 11px; }
-      .btn-outline { padding: 8px 16px; font-size: 11px; }
     }
   </style>
 </head>
@@ -641,19 +646,20 @@
 
   <header>
     <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
-      <div class="logo-container" style="display: flex; align-items: center; gap: 12px;">
-    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 4L4 16L14 26L22.5 38L31 26L41 16L33 4L22.5 12L12 4Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-        <path d="M14 16L22.5 24L31 16" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M22.5 38V24" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
-    </svg>
+      
+      <div class="logo-container" style="display: flex; align-items: center; gap: 8px;">
+        <svg width="40" height="40" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4L4 16L14 26L22.5 38L31 26L41 16L33 4L22.5 12L12 4Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M14 16L22.5 24L31 16" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22.5 38V24" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+        </svg>
 
-    <div class="logo-text" style="font-weight: 900; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1;">
-        <span style="color: #ffffff;">PREPARO</span><br>
-	<div class="logo-text" style="font-weight: 900; font-size: 22px; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1;">
-        <span style="color: #dc2626;"><i>MASCULINO</i></span>
-    </div></div>
-</div>
+        <div class="logo-text" style="font-weight: 900; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1;">
+            <span style="color: #ffffff;">PREPARO</span><br>
+            <span style="color: #dc2626;">MASCULINO</span>
+        </div>
+      </div>
+
       <div class="nav-actions">
           <a href="#" class="btn-outline">Login</a>
           <a href="#" class="btn-header-gold">Iniciar</a>
@@ -889,9 +895,10 @@
       </div>
   </section>
 
-<section class="faq-section">
+  <section class="faq-section">
       <div class="container faq-container">
-          <h2>PERGUNTAS IMPORTANTES</h2>
+          <h2>INTELIGÊNCIA OPERACIONAL</h2>
+          <p style="text-align: center; color: #666; margin-bottom: 40px;">Respostas diretas para perguntas táticas.</p>
           
           <div class="faq-item">
               <div class="faq-question">O que difere o Sistema de um simples app de hábitos?</div>
@@ -931,8 +938,6 @@
       </div>
   </section>
 
-
-
   <footer style="padding: 40px 0; background: #000; text-align: center; border-top: 1px solid #222; color: #555; font-size: 13px;">
     <div class="container">
       <p style="margin-bottom: 10px;">&copy; 2025 PREPARO MASCULINO.</p>
@@ -944,6 +949,10 @@
       const faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(item => {
           item.querySelector('.faq-question').addEventListener('click', () => {
+              // Fecha os outros
+              faqItems.forEach(i => {
+                  if(i !== item) i.classList.remove('active');
+              });
               item.classList.toggle('active');
           });
       });
